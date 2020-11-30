@@ -1,0 +1,41 @@
+.menu-toggle {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 106px;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  font-size: 20px;
+  color: #262626;
+  cursor: pointer;
+  background: url("./img/burger.png") center no-repeat;
+  z-index: 100;
+
+  &.open {
+    left: 331px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .menu-toggle {
+    display: flex;
+    position: absolute;
+    left: 128px;
+    right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-toggle {
+    display: flex;
+    left: 10px;
+    right: 0;
+
+    &.open {
+      left: 192px;
+    }
+  }
+}
